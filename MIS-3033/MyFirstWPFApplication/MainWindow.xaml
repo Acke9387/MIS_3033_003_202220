@@ -5,8 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyFirstWPFApplication"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="My First Application" Height="503" Width="589" Foreground="#FFDAD327">
+    <Window.Background>
+        <ImageBrush ImageSource="https://applecreekdoodles.com/wp-content/uploads/2021/11/bmo-f1-sheepadoodle.jpg"/>
+    </Window.Background>
     <Grid>
+        <Button x:Name="btnGo" Content="Click ME" Margin="197,244,0,0" VerticalAlignment="Top" Height="92" Background="#FFDC2424" HorizontalAlignment="Left" Width="158" Click="btnGo_Click"/>
+        <TextBox x:Name="txtName" HorizontalAlignment="Left" Margin="186,73,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+        <Label Content="Enter your name:" HorizontalAlignment="Left" Margin="35,69,0,0" VerticalAlignment="Top" Width="121" Background="#FFEF8C8C"/>
 
     </Grid>
 </Window>

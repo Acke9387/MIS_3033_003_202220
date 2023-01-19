@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MyFirstWPFApplication
+namespace SecondWPFApplication
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -23,26 +23,6 @@ namespace MyFirstWPFApplication
         public MainWindow()
         {
             InitializeComponent();
-
         }
-
-        private void btnGo_Click(object sender, RoutedEventArgs e)
-        {
-
-            TextBox x = new TextBox();
-            string name = txtName.Text;
-
-            if (string.IsNullOrWhiteSpace(name) == false)
-            {
-                MessageBox.Show($"Hello {name}!"); 
-            }
-            else
-            {
-                MessageBox.Show("Please enter your name then press the button");
-            }
-
-        }
-
-       
     }
 }
