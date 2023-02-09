@@ -11,7 +11,7 @@
         <Label Content="Please enter your name" HorizontalAlignment="Left" Margin="88,63,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtBirthdate" HorizontalAlignment="Left" Margin="252,115,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <Label Content="Please enter your birthdate" HorizontalAlignment="Left" Margin="88,109,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnCalculate" Content="Calculate Age" HorizontalAlignment="Left" Margin="201,205,0,0" VerticalAlignment="Top" Height="44" Width="111" IsDefault="True" Click="btnCalculate_Click" MouseEnter="btnCalculate_MouseEnter" MouseLeave="btnCalculate_MouseLeave"/>
+        <Button x:Name="btnCalculate" Content="Calculate Age" HorizontalAlignment="Left" Margin="201,205,0,0" VerticalAlignment="Top" Height="44" Width="111" IsDefault="True"/>
         <ListBox x:Name="lstOutput" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="446,0,0,0"/>
 
     </Grid>
