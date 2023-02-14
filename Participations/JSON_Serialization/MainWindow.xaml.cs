@@ -64,7 +64,7 @@ namespace JSON_Serialization
             //List<Game> games = JsonConvert.DeserializeObject<List<Game>>(jsonOutput);
 
             File.WriteAllText($"{cboPlatforms.SelectedItem.ToString()}_Games.json", jsonOutput);
-            MessageBox.Show("Successfully Saved Data");
+            MessageBox.Show("Successfully Saved Data"); 
         }
     }
 }
