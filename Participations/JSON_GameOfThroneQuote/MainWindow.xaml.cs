@@ -28,7 +28,7 @@ namespace JSON_GameOfThroneQuote
 
             using (var client = new HttpClient())
             {
-                string json = client.GetStringAsync("").Result;
+                string json = client.GetStringAsync("https://api.gameofthronesquotes.xyz/v1/random").Result;
 
             }
         }
