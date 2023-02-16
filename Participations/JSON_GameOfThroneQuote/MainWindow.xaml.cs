@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -24,13 +25,37 @@ namespace JSON_GameOfThroneQuote
         public MainWindow()
         {
             InitializeComponent();
+            GOTAPI api = GetQuote();
+            lblQuote.Content = $"{api.sentence} - {api.character.name}";
+        }
+
+        private GOTAPI GetQuote()
+        {
+            GOTAPI api;
 
 
             using (var client = new HttpClient())
             {
                 string json = client.GetStringAsync("https://api.gameofthronesquotes.xyz/v1/random").Result;
 
+                api = JsonConvert.DeserializeObject<GOTAPI>(json);
+
             }
+
+            return api;
+           
+        }
+
+        private void btnGetQuote_Click(object sender, RoutedEventArgs e)
+        {
+            GOTAPI api =  GetQuote();
+            lblQuote.Content = $"{api.sentence} - {api.character.name}";
+
+            QuoteWindow quote = new QuoteWindow();
+            quote.SetData(api);
+
+            quote.ShowDialog();
+
         }
     }
 }
