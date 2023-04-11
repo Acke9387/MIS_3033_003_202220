@@ -1,0 +1,23 @@
+﻿@model IEnumerable<string>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>TA's For Spring '23</h1>
+
+<div class="container">
+    <div class="row">
+        @foreach (var item in Model)
+        {
+                            <div class="card" style="width: 18rem; margin:5px;">
+                              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cmFuZG9tJTIwcGVvcGxlfGVufDB8fDB8fA%3D%3D&w=1000&q=80" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h5 class="card-title">@item</h5>
+                    @*<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>*@
+                          </div>
+                        </div>
+        }
+    </div>
+</div>
